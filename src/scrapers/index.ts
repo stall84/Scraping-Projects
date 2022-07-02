@@ -14,7 +14,7 @@ async function scrapeProduct(url:any) {
     const text = await ele2.getProperty('textContent');
     const title = await text.jsonValue();
 
-    const [ele3] = await page.$x('//*[@id="newBuyBoxPrice"]');
+    const [ele3] = await page.$x('//*[@id="newBuyBoxPrice"]');      // Same for the price
     const text3 = await ele3.getProperty('textContent');
     const price = await text3.jsonValue();
 
